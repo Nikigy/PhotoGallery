@@ -1,0 +1,36 @@
+PhotoGallery:
+
+    BoxLayout:
+        orientation: 'vertical'
+
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y: 0.1
+            
+            Label:
+                text: 'Photo Gallery'
+                size_hint_y: 0.1
+
+            Label:
+                id: index
+                text: '0'
+                size_hint_y: 0.1
+
+        Image:
+            id: image
+            source: root.display_image()
+            size_hint_y: 0.8
+
+        BoxLayout:
+            size_hint_y: 0.1
+
+            Button:
+                text: '<'
+                size_hint_x: 0.1
+                on_press: root.previous_image()
+
+            Button:
+                text: '>'
+                size_hint_x: 0.1
+                on_press: root.next_image()
+    
